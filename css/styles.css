@@ -47,3 +47,19 @@ body {
     
 
 } 
+
+.carousel {
+    background: #512DA8;
+
+}
+
+.carousel-item {
+    height: 300px; /* Sets the height of the carousel (how much it spans the screen vertically)*/
+}
+
+.carousel-item img {
+    position: absolute; /* Makes the image fixed in the top left position */
+    top: 0;
+    left: 0;
+    min-height: 300px;
+}

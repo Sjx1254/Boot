@@ -31,7 +31,8 @@
                 </ul>
 
                 <span class="navbar-text"> <!--This makes the button text white-->
-                    <a data-toggle="modal" data-target="#loginModal">  <!--Defining a button that will take us to the modal (we specify where we want the button to take us using data-target again) -->
+                    <a id="loginLink">  <!--Defining a button that will take us to the modal (we specify where we want the button to take us using data-target again) -->
+                                                                        <!--(data-toggle="modal" data-target="#loginModal")-->
                         <span class="fa fa-sign-in"></span> Login <!-- An icon font before the text-->
                     </a>
                 </span>
@@ -178,7 +179,7 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm">
-                    <a class="btn btn-warning text-dark" data-toggle="modal" data-target="#reserveModal"> Reserve Table </a> <!-- this is how you make a tooltip, by setting data-toggle to tooltip. The title specifies what will be in the tooltip (you can use html inside of that by making data-html true, as shown)-->
+                    <a class="btn btn-warning text-dark" id="reserveButton"> Reserve Table </a> <!-- this is how you make a tooltip, by setting data-toggle to tooltip. The title specifies what will be in the tooltip (you can use html inside of that by making data-html true, as shown)-->
 
                 </div>
             </div>
@@ -358,31 +359,7 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function() { 
-            $('#mycarousel').carousel({ interval: 2000});
-            $('#carouselButton').click(function() {
-                if ($('#carouselButton').children('span').hasClass('fa-pause')) { 
-                    $('#mycarousel').carousel('pause');
-                    $('#carouselButton').children('span').removeClass('fa-pause')
-                    $('#carouselButton').children('span').addClass('fa-play')
-                }
-                else {
-                    $('#mycarousel').carousel('cycle');
-                    $('#carouselButton').children('span').removeClass('fa-play')
-                    $('#carouselButton').children('span').addClass('fa-pause')
-
-                }
-                
-            });
-        });
-    </script> <!--the ids of the carousel and the buttons are accessed as the selections, and the .carousel('cycle') and .carousel('pause') are the actions (in this case making sure the buttons play and pause when clicked, performing it on the entire carousel)-->
-              <!--The interval action specifies how fast the carousel will move between each slide-->
-              <!--Part 2-->
-                <!--The children class goes to the span element of the content with the id -->
-                <!--hasClass checks the current class-->
-                <!--add and remove class changes the font icon and function of the current button, from play to pause or vice versa-->
-                <!--whenever the user clicks the button, the button and operation on the carousel is changed, and this repeats-->
+    <script src='js/scripts.js'> </script> 
 
 </body>
 
